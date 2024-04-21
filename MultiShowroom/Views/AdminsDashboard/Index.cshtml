@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<h2>Index</h2>*@
+<body>
+    <h1>Admin dashboard</h1>
+    <div>
+        <div>
+            <button type="submit"> @Html.ActionLink("AdminDetails", "Index", "Admins") </button>
+        </div>
+        <div>
+            <button type="submit"> @Html.ActionLink("BookingDetails", "Index", "Bookings") </button>
+        </div>
+        <div>
+            <button type="submit"> @Html.ActionLink("BranchDetails", "Index", "BranchDetails") </button>
+        </div>
+        <div>
+            <button type="submit"> @Html.ActionLink("CarDetails", "Index", "CarDetails") </button>
+        </div>
+        <div>
+            <button type="submit"> @Html.ActionLink("SchemeDetails", "Index", "Schemes") </button>
+        </div>
+        <div>
+            <button type="submit"> @Html.ActionLink("CustomerDetails", "Index", "CustomerDetails") </button>
+        </div>
+    </div>
+    <div>
+        <button type="submit"> @Html.ActionLink("Back", "Index", "Home") </button>
+    </div>
+
+</body>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-size: cover;
+        background-image: url('../../images/blackcarbg1.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; /* Set the height of the body to 100% of the viewport height */
+    }
+
+
+    .body-content {
+        margin: 0;
+        padding: 0;
+    }
+</style>

@@ -1,0 +1,63 @@
+﻿@model MultiShowroom.Models.CarDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+<body>
+    <h2>Details of car for You Dream car</h2>
+
+    <div>
+
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.CarName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CarName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CarPrice)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CarPrice)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BranchDetail.BranchName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BranchDetail.BranchName)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @*@Html.ActionLink("Edit", "Edit", new { id = Model.CarID }) |*@
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+
+
+</body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-size: cover;
+        background-image: url('../../images/blackcarbg1.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; /* Set the height of the body to 100% of the viewport height */
+    }
+
+
+    .body-content {
+        margin: 0;
+        padding: 0;
+    }
+</style>

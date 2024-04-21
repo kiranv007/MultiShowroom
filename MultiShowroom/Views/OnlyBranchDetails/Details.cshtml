@@ -1,0 +1,61 @@
+﻿@model MultiShowroom.Models.BranchDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+<body>
+    <h2>Details of Your Bookings</h2>
+
+    <div>
+        <h4>BranchDetail</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.BranchName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BranchName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.City)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.City)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @*@Html.ActionLink("Edit", "Edit", new { id = Model.BranchID }) |*@
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+
+
+</body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-size: cover;
+        background-image: url('../../images/blackcarbg1.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; /* Set the height of the body to 100% of the viewport height */
+    }
+    .body-content {
+        margin: 0;
+        padding: 0;
+    }
+</style>

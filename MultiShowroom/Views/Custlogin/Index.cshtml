@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<h2> Index</h2>*@
+<h1>Please give proper credentials for login</h1>
+<form action="" method="post">
+    <label for="Username">Username:</label>
+    <input type="text" id="admin-username" name="Username" required><br><br>
+
+
+
+    <label for="Password">Password:</label>
+    <input type="password" id="admin-password" name="Password" required><br><br>
+
+    <input type="submit" value="Login" />
+
+    @*<button type="submit"> @Html.ActionLink("Login", "Index","CustomerDashboard")</button>*@
+</form>
+<div>
+    <button type="submit"> @Html.ActionLink("Back", "Index", "Home") </button>
+</div>

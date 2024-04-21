@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2> Index</h2>
+
+<h1>Customer Dashboard</h1>
+<h3>Choose the  Required options </h3>
+
+<h2>Click on Booking now for new Order</h2>
+
+<div>
+    <div>
+        <button type="submit"> @Html.ActionLink("BranchDetails", "Index", "OnlyBranchDetails") </button>
+    </div>
+    <div>
+        <button type="submit"> @Html.ActionLink("CarDetails", "Index", "OnlyCarDetails") </button>
+    </div>
+    <div>
+        <button type="submit"> @Html.ActionLink("SchemeDetails", "Index", "OnlySchemes") </button>
+    </div>
+
+</div>
+
+<div>
+
+    <div>
+        <button type="submit"> @Html.ActionLink(" Click! to Booking your new Car", "Create", "Bookings") </button>
+    </div>
+</div>
+<div>
+    <div>
+        <button type="submit"> @Html.ActionLink("Back", "Index", "Home") </button>
+    </div>
+</div>

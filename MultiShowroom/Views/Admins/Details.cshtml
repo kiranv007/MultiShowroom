@@ -1,0 +1,56 @@
+﻿@model MultiShowroom.Models.Admin
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<body>
+    <h2>Details od Admins</h2>
+
+    <div>
+        <h4>Admin</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Username)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Username)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Password)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Password)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.AdminID }) |
+        @*@Html.ActionLink("Back to List", "Index")*@
+    </p>
+    <button type="submit"> @Html.ActionLink("Back", "Index", "AdminsDashboard") </button>
+
+</body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-size: cover;
+        background-image: url('../../images/blackcarbg1.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; /* Set the height of the body to 100% of the viewport height */
+    }
+
+
+    .body-content {
+        margin: 0;
+        padding: 0;
+    }
+</style>

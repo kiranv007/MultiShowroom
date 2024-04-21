@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="body">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+            @Html.ActionLink("Famous-Multicars", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Famous Multi Car Showroom</p>
+        </footer>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+<style>
+    h2 {
+        color:#1daca4;
+        transition: all 0.5s ease-in;
+    }
+    h1 {
+        font-size: 50px;
+        transition: all 0.5s ease-in;
+    }
+    .card:hover{
+        color:#55bea8;
+        background-color:#ffffff;
+    }
+
+    .body{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+
+    .form-group {
+        color: white;
+    }
+    h4 {
+        color: white;
+    }
+    h1 {
+        color:#dddc2e
+    }
+    h3 {
+        color: white;
+    }
+    p{
+        color:white;
+    }
+
+    th{
+        color:red;
+    }
+    td{
+        color:white
+    }
+
+    button{
+        background-color:#f0d12c;
+        color:black;
+        border-radius:25%;
+    }
+</style>

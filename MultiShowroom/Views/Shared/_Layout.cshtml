@@ -10,6 +10,7 @@
 <body class="body">
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
         <div class="container">
+            <h1 ><img src="~/Images/multicarlogo.png" alt="Famous-Multicars" class="logo_1 " style="width:8rem;height:5rem; border-radius:25% ;margin-right:2rem" /></h1>
             @Html.ActionLink("Famous-Multicars", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -71,35 +72,42 @@
         color: white;
     }
 
-    h4 {
+  /*  h4 {
         color: white;
-    }
+    }*/
 
     h1 {
-        color: #dddc2e
+        color: #dddc2e;
     }
 
-    h3 {
+    /*  h3 {
         color: white;
     }
 
     p {
         color: white;
     }
-
+*/
     th {
-        color: red;
+        color: #eb0f45
     }
-
+      
     td {
-        color: white
+        color: black;
     }
 
     button {
-        background-color: #f0d12c;
+        background-color: #39eae5;
         color: black;
-        border-radius: 25%;
+        border-radius: 15%;
         text-decoration: none;
     }
-
+    .form-group{
+        color:black;
+    }
+    .logo1{
+        width:5rem;
+        height:1rem;
+        border-radius:25%;
+    }
 </style>

@@ -2,76 +2,94 @@
 @{
     ViewBag.Title = "Index";
 }
+<body>
+    <h2> Index</h2>
 
-<h2> Index</h2>
+    <h1>Customer Dashboard</h1>
+    <h3>Choose the  Required options </h3>
 
-<h1>Customer Dashboard</h1>
-<h3>Choose the  Required options </h3>
+    <h2>Click on Booking now for new Order</h2>
+    <section>
+        <div class="container login d-flex justify-content-around">
 
-<h2>Click on Booking now for new Order</h2>
-<section>
-    <div class="container login d-flex justify-content-around">
+            <div class="card" style="width: 18rem; height : 25rem;">
+                <img src="~/Images/dashboard/bookingdash.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title ">Bookings now</h4>
+                    <h3 class="card-text ">details</h3>
+                    <button type="submit"> @Html.ActionLink(" Click! to Booking your new Car", "Create", "Bookings") </button>
+                    @*<a href="" class="btn btn-primary">Click!</a>*@
 
-        <div class="card" style="width: 18rem; height : 25rem;">
-            <img src="~/Images/dashboard/bookingdash.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h4 class="card-title ">Bookings now</h4>
-                <h3 class="card-text ">details</h3>
-                <button type="submit"> @Html.ActionLink(" Click! to Booking your new Car", "Create", "Bookings") </button>
-                @*<a href="" class="btn btn-primary">Click!</a>*@
-
+                </div>
             </div>
-        </div>
 
-        <div class="card" style="width: 18rem; height :25rem;">
-            <img src="~/Images/dashboard/branchdash.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h4 class="card-title ">Branch</h4>
-                <h3 class="card-text ">Details</h3>
-                <button type="submit"> @Html.ActionLink("BranchDetails", "Index", "OnlyBranchDetails") </button>
-                @*<a href="" class="btn btn-primary">Click!</a>*@
+            <div class="card" style="width: 18rem; height :25rem;">
+                <img src="~/Images/dashboard/branchdash.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title ">Branch</h4>
+                    <h3 class="card-text ">Details</h3>
+                    <button type="submit"> @Html.ActionLink("BranchDetails", "Index", "OnlyBranchDetails") </button>
+                    @*<a href="" class="btn btn-primary">Click!</a>*@
 
+                </div>
             </div>
-        </div>
 
 
 
 
-        <div class="card" style="width: 18rem; height :25rem;">
-            <img src="~/Images/banner/banner4.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h4 class="card-title ">Car</h4>
-                <h3 class="card-text ">Deatils</h3>
+            <div class="card" style="width: 18rem; height :25rem;">
+                <img src="~/Images/cars/vitara.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title ">Car</h4>
+                    <h3 class="card-text ">Deatils</h3>
 
-                @*<a href="" class="btn btn-primary">Click!</a>*@
-                <button type="submit"> @Html.ActionLink("CarDetails", "Index", "OnlyCarDetails") </button>
+                    @*<a href="" class="btn btn-primary">Click!</a>*@
+                    <button type="submit"> @Html.ActionLink("CarDetails", "Index", "OnlyCarDetails") </button>
+                </div>
             </div>
-        </div>
 
 
-        <div class="card" style="width: 18rem; height :25rem;">
-            <img src="~/Images/adminlogo1.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h4 class="card-title ">Schemes</h4>
-                <h3 class="card-text ">Details</h3>
+            <div class="card" style="width: 18rem; height :25rem;">
+                <img src="~/Images/dashboard/schemesdash.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title ">Schemes</h4>
+                    <h3 class="card-text ">Details</h3>
 
-                @*<a href="" class="btn btn-primary">Click!</a>*@
-                <button type="submit"> @Html.ActionLink("SchemeDetails", "Index", "OnlySchemes") </button>
+                    @*<a href="" class="btn btn-primary">Click!</a>*@
+                    <button type="submit"> @Html.ActionLink("SchemeDetails", "Index", "OnlySchemes") </button>
+                </div>
             </div>
-        </div>
 
+        </div>
+    </section>
+
+
+    <div>
+        <div class="backbutton">
+            <button type="submit"> @Html.ActionLink("Back", "Index", "Home") </button>
+        </div>
     </div>
-</section>
 
 
-<div>
-    <div class="backbutton">
-        <button type="submit"> @Html.ActionLink("Back", "Index", "Home") </button>
-    </div>
-</div>
-
+</body>
 <style>
-    .backbutton{
-        margin:10rem ;
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-size: cover;
+        background-image: url('../../images/whitebg1.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; /* Set the height of the body to 100% of the viewport height */
+    }
+
+
+    .body-content {
+        margin: 0;
+        padding: 0;
+    }
+    .backbutton {
+        margin: 10rem;
     }
 </style>

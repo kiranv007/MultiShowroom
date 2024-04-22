@@ -6,7 +6,7 @@
 <body>
     <h2>Bookings</h2>
 
-    <p>
+    <p class="action">
         @Html.ActionLink("Create New", "Create")
     </p>
     <table class="table">
@@ -71,5 +71,10 @@
     .body-content {
         margin: 0;
         padding: 0;
+    }
+
+    .action{
+        text-decoration:none;
+        color:black
     }
 </style>

@@ -1,20 +1,50 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<main aria-labelledby="title">
-    <h2 id="title">@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
 
-    <div>
-        <h3>ABOUT Multi Cars</h3>
-        <p> About</p>
-        <p>
-            Careers With Us
-            Terms & Conditions
-            Privacy Policy
-            Corporate Policies
-            Investors
-            FAQs
-        </p>
-    </div>
-</main>
+<body>
+    <main aria-labelledby="title">
+        @*<h2 id="title">@ViewBag.Title.</h2>*@
+        @*<h3>@ViewBag.Message</h3>*@
+
+        <section>
+            ABOUT
+        </section>
+        <p>Office mail for support and complaint..</p>
+        <div class="about">
+            ABOUT Multi Cars<br />
+            Careers With Us<br />>
+            Terms & Conditions<br />
+            Privacy Policy<br />
+            Corporate Policies<br />
+            Investors<br />
+            FAQs<br />
+        </div>
+    </main>
+
+
+</body>
+
+<style>
+   /*.about{
+       color:black;
+       
+   }*/
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-size: cover;
+
+        background-image: url('../../images/whitebg1.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; /* Set the height of the body to 100% of the viewport height */
+    }
+
+
+    .body-content {
+        margin: 0;
+        padding: 0;
+    }
+</style>

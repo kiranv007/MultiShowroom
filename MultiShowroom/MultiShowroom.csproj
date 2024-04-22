@@ -210,6 +210,11 @@
     <Content Include="Images\carlogo1.jpg" />
     <Content Include="Images\carlogos.jpg" />
     <Content Include="Images\customerlogo.jpeg" />
+    <Content Include="Images\dashboard\admindash.jpg" />
+    <Content Include="Images\dashboard\bookingdash.jpg" />
+    <Content Include="Images\dashboard\branchdash.jpg" />
+    <Content Include="Images\dashboard\customerdash.jpg" />
+    <Content Include="Images\dashboard\designbg1.jpg" />
     <Content Include="Images\designbg1.jpg" />
     <Content Include="Images\happycustomer1.jpg" />
     <Content Include="Images\multicarlogo.png" />
@@ -243,6 +248,7 @@
     <Content Include="Images\banner\banner1.jpg" />
     <Content Include="Images\banner\banner3.jpg" />
     <Content Include="Images\banner\banner4.jpg" />
+    <Content Include="Images\dashboard\schemesdash.jpg" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

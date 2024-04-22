@@ -28,7 +28,8 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Famous Multi Car Showroom</p>
+            @*<p>&copy; @DateTime.Now.Year - Famous Multi Car Showroom</p>*@
+            &copy; 2024-Famous Multi Car Showroom
         </footer>
     </div>
 
@@ -41,51 +42,64 @@
 
 <style>
     h2 {
-        color:#1daca4;
+        font-family: cursive;
+        font-weight: bold;
+        color: #1daca4;
         transition: all 0.5s ease-in;
     }
+
     h1 {
+        font-family: cursive;
+        font-weight: bold;
         font-size: 50px;
         transition: all 0.5s ease-in;
     }
-    .card:hover{
-        color:#55bea8;
-        background-color:#ffffff;
+
+    .card:hover,card:active {
+        color: #55bea8;
+        background-color: #ffffff;
     }
 
-    .body{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
+    .body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-
+ 
 
     .form-group {
         color: white;
     }
+
     h4 {
         color: white;
     }
+
     h1 {
-        color:#dddc2e
+        color: #dddc2e
     }
+
     h3 {
         color: white;
     }
-    p{
-        color:white;
+
+    p {
+        color: white;
     }
 
-    th{
-        color:red;
-    }
-    td{
-        color:white
+    th {
+        color: red;
     }
 
-    button{
-        background-color:#f0d12c;
-        color:black;
-        border-radius:25%;
+    td {
+        color: white
     }
+
+    button {
+        background-color: #f0d12c;
+        color: black;
+        border-radius: 25%;
+        text-decoration: none;
+    }
+
 </style>

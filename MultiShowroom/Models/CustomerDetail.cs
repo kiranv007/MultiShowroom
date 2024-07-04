@@ -11,8 +11,7 @@ namespace MultiShowroom.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class CustomerDetail
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,23 +19,16 @@ namespace MultiShowroom.Models
         {
             this.Bookings = new HashSet<Booking>();
         }
-        [Required]
+    
         public int CustomerID { get; set; }
-        [Required]
         public string FirstName { get; set; }
-        [Required]
         public string LastName { get; set; }
-        [Required]
         public string Email { get; set; }
-        [Required]
         public string Phone { get; set; }
-        [Required]
         public string UserName { get; set; }
-        [Required]
         public string Password { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [Required]
         public virtual ICollection<Booking> Bookings { get; set; }
     }
 }

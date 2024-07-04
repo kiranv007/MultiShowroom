@@ -11,8 +11,7 @@ namespace MultiShowroom.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class BranchDetail
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,17 +19,13 @@ namespace MultiShowroom.Models
         {
             this.CarDetails = new HashSet<CarDetail>();
         }
-        [Required]
+    
         public int BranchID { get; set; }
-        [Required]
         public string BranchName { get; set; }
-        [Required]
         public string City { get; set; }
-        [Required]
         public string Address { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [Required]
         public virtual ICollection<CarDetail> CarDetails { get; set; }
     }
 }

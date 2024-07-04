@@ -11,8 +11,7 @@ namespace MultiShowroom.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class CarDetail
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,20 +19,14 @@ namespace MultiShowroom.Models
         {
             this.Bookings = new HashSet<Booking>();
         }
-        [Required]
+    
         public int CarID { get; set; }
-        [Required]
         public string CarName { get; set; }
-        [Required]
         public Nullable<decimal> CarPrice { get; set; }
-        [Required]
         public Nullable<int> BranchID { get; set; }
-     
-
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [Required]
         public virtual ICollection<Booking> Bookings { get; set; }
-        [Required]
         public virtual BranchDetail BranchDetail { get; set; }
     }
 }

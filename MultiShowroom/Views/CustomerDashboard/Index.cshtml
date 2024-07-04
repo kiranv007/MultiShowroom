@@ -13,18 +13,19 @@
         <div class="container login d-flex justify-content-around">
 
             <div class="card" style="width: 18rem; height : 25rem;">
-                <img src="~/Images/dashboard/bookingdash.jpg" class="card-img-top" alt="...">
+                <img src="~/Images/dashboard/bookingdash.jpg" class="card-img-top" alt="..." style="height:18rem">
                 <div class="card-body">
                     <h4 class="card-title ">Bookings now</h4>
                     <h3 class="card-text ">details</h3>
-                    <button type="submit"> @Html.ActionLink(" Click! to Booking your new Car", "Create", "Bookings") </button>
+                    @*<button type="submit"> @Html.ActionLink(" Click! to Booking your new Car", "Create", "Bookings") </button>*@
                     @*<a href="" class="btn btn-primary">Click!</a>*@
+                <a href="https://localhost:44317/Book.html" class="btn btn-primary">Click! to Booking your new Car</a>
 
                 </div>
             </div>
 
             <div class="card" style="width: 18rem; height :25rem;">
-                <img src="~/Images/dashboard/branchdash.jpg" class="card-img-top" alt="...">
+                <img src="~/Images/dashboard/branchdash.jpg" class="card-img-top" alt="..."style="height:18rem">
                 <div class="card-body">
                     <h4 class="card-title ">Branch</h4>
                     <h3 class="card-text ">Details</h3>
@@ -38,7 +39,7 @@
 
 
             <div class="card" style="width: 18rem; height :25rem;">
-                <img src="~/Images/cars/lambo.jpg" class="card-img-top" alt="...">
+                <img src="~/Images/cars/lambo.jpg" class="card-img-top" alt="..."style="height:18rem">
                 <div class="card-body">
                     <h4 class="card-title ">Car</h4>
                     <h3 class="card-text ">Deatils</h3>
@@ -50,7 +51,7 @@
 
 
             <div class="card" style="width: 18rem; height :25rem;">
-                <img src="~/Images/dashboard/schemesdash.jpg" class="card-img-top" alt="...">
+                <img src="~/Images/dashboard/schemesdash.jpg" class="card-img-top" alt="..."style="height:18rem">
                 <div class="card-body">
                     <h4 class="card-title ">Schemes</h4>
                     <h3 class="card-text ">Details</h3>
@@ -90,6 +91,7 @@
         padding: 0;
     }
     .backbutton {
-        margin: 10rem;
+        margin-left: 5rem;
+        margin-top:2rem;
     }
 </style>

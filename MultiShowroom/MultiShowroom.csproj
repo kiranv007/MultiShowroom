@@ -184,6 +184,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Book.html" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -227,6 +228,13 @@
     <Content Include="Images\designbg1.jpg" />
     <Content Include="Images\happycustomer1.jpg" />
     <Content Include="Images\multicarlogo.png" />
+    <Content Include="Images\new\bmwV.jpg" />
+    <Content Include="Images\new\creata.jpg" />
+    <Content Include="Images\new\honda civic.jpg" />
+    <Content Include="Images\new\i20.jpg" />
+    <Content Include="Images\new\MahindraScorpionLarge.jpg" />
+    <Content Include="Images\new\nexon.jpg" />
+    <Content Include="Images\new\venue.jpg" />
     <Content Include="Images\vedio\banner vedio.mp4" />
     <Content Include="Images\vedio\vedio2.mp4" />
     <Content Include="Images\vedio\vedio3.mp4" />

@@ -11,260 +11,289 @@
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
-
-        <div class="form-horizontal">
-            <h4>Booking</h4>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(model => model.CarID, "CarID", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DropDownList("CarID", null, htmlAttributes: new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.CarID, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            @*<div class="form-group">
-                    @Html.LabelFor(model => model.CarID, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.CarID, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.CarID, "", new { @class = "text-danger" })
-                    </div>
-                </div>*@
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.CustomerID, "CustomerID", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DropDownList("CustomerID", null, htmlAttributes: new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.CustomerID, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            @*<div class="form-group">
-                    @Html.LabelFor(model => model.CustomerID, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.CustomerID, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.CustomerID, "", new { @class = "text-danger" })
-                    </div>
-                </div>*@
-
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.CarName, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.CarName, new { htmlAttributes = new { @class = "form-control" } })
-
-                    @*@Html.DropDownList("CarName", null,htmlAttributes: new { @class = "form-control" } )*@
-                    @Html.ValidationMessageFor(model => model.CarName, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.SchemeName, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.SchemeName, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.SchemeName, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.BookingDate, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.BookingDate, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.BookingDate, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.BookingAmount, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.BookingAmount, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.BookingAmount, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.UPI_ID, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.UPI_ID, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.UPI_ID, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
-                </div>
+<div class="container d-flex justify-content-between">
+    <div class="form-horizontal">
+        <h4>Booking</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.CarID, "CarID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("CarID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CarID, "", new { @class = "text-danger" })
             </div>
         </div>
-    }
-
-<section class=" qrcode ">
-    <div class="container d-flex justify-content-center">
-        <div class="row align-items-center">
-
-            <div class="col-6">
-                <div class="card1" style="max-width: 25rem;">
-                    <img class="card-img-top" src="~/Images/dashboard/Qrcode.jpg" alt="Card image cap">
-                    
-                    <p class="card-text"> Use This QR code for UPI payment</p>
-                    <h5 class="card-text"> Share UPI-ID number </h5>
-
-                    @*<a href="#" class="btn btn-primary"></a>*@
-                </div>
-                </div>
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.CarID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CarID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CarID, "", new { @class = "text-danger" })
             </div>
-       </div>
-    
-</section>
-
-    @*<div>
-            @Html.ActionLink("Back to List", "Index")
         </div>*@
-    <div>
-        <button type="submit"> @Html.ActionLink("Back", "Index", "Home") </button>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CustomerID, "CustomerID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("CustomerID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CustomerID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.CustomerID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustomerID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CustomerID, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CarName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CarName, new { htmlAttributes = new { @class = "form-control" } })
+
+                @*@Html.DropDownList("CarName", null,htmlAttributes: new { @class = "form-control" } )*@
+                @Html.ValidationMessageFor(model => model.CarName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SchemeName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SchemeName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SchemeName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookingDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BookingDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.BookingDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookingAmount, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BookingAmount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.BookingAmount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UPI_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UPI_ID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UPI_ID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+     
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
     </div>
 
-    @section Scripts {
-        @Scripts.Render("~/bundles/jqueryval")
-    }
+    <div class="row align-items-center">
+        <div class="col-6">
+            <div class="card1" style="max-width: 25rem;">
+                <img class="card-img-top" src="~/Images/dashboard/Qrcode.jpg" alt="Card image cap">
 
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="~/Images/cars/Audi.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Audi x101</h5>
-                        <p class="card-text">CAR_ID 101.</p>
-                        <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/Images/cars/Benz.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Benz v-series 101</h5>
-                        <p class="card-text">CarID 102.</p>
-                        <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="~/Images/cars/ferari.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Ferari 200</h5>
-                        <p class="card-text">CarID 103</p>
-                        <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="~/Images/cars/Audi.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Audi x101</h5>
-                        <p class="card-text">CAR_ID 101.</p>
-                        <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="~/Images/cars/Audi.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Audi x101</h5>
-                        <p class="card-text">CAR_ID 101.</p>
-                        <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
-                    </div>
-                </div>
+                <p class="card-text"> Use This QR code for UPI payment</p>
+                <h5 class="card-text text-1"> Share UPI-ID number </h5>
+
+                @*<a href="#" class="btn btn-primary"></a>*@
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="~/Images/cars/vitara.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Vitara zx</h5>
-                        <p class="card-text">CarID 104</p>
-                        <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
+    </div>
+
+</div>
+            }
+
+            <!--<section class=" qrcode ">
+
+                <div class="container d-flex justify-content-center">
+                    <div class="row align-items-center">
+
+                        <div class="col-6">
+                            <div class="card1" style="max-width: 25rem;">
+                                <img class="card-img-top" src="~/Images/dashboard/Qrcode.jpg" alt="Card image cap">
+
+                                <p class="card-text"> Use This QR code for UPI payment</p>
+                                <h5 class="card-text"> Share UPI-ID number </h5>-->
+
+                                @*<a href="#" class="btn btn-primary"></a>*@
+                            <!--</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/Images/cars/Benz.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Benz v-series 101</h5>
-                        <p class="card-text">CarID 102.</p>
-                        <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="~/Images/cars/brezza.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Brezza vdi</h5>
-                        <p class="card-text">CarID 105</p>
-                        <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="~/Images/cars/vitara.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Vitara zxi</h5>
-                        <p class="card-text">CarID 106</p>
-                        <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/Images/cars/Benz.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Benz s-series</h5>
-                        <p class="card-text">CarID 107</p>
-                        <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="~/Images/cars/ferari.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">ferari x78</h5>
-                        <p class="card-text">CarID 108</p>
-                        <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="~/Images/cars/ferari.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">ferari x78</h5>
-                        <p class="card-text">CarID 108</p>
-                        <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
-                    </div>
-                </div>
+
+            </section>-->
+
+            @*<div>
+                    @Html.ActionLink("Back to List", "Index")
+                </div>*@
+            <div>
+                <button type="submit"> @Html.ActionLink("Back", "Index", "Home") </button>
             </div>
 
-        </div>
+            @section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }
 
-</section>
-</body>
+            <!--<section class="cars">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="~/Images/cars/Audi.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Audi x101</h5>
+                                    <p class="card-text">CAR_ID 101.</p>
+                                    <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="/Images/cars/Benz.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Benz v-series 101</h5>
+                                    <p class="card-text">CarID 102.</p>
+                                    <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="~/Images/cars/ferari.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ferari 200</h5>
+                                    <p class="card-text">CarID 103</p>
+                                    <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="~/Images/cars/Audi.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Audi x101</h5>
+                                    <p class="card-text">CAR_ID 101.</p>
+                                    <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>-->
+
+                        @*<div class="col">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="~/Images/cars/Audi.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Audi x101</h5>
+                                        <p class="card-text">CAR_ID 101.</p>
+                                        <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>*@
+                    <!--</div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="~/Images/cars/vitara.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Vitara zx</h5>
+                                <p class="card-text">CarID 104</p>
+                                <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="/Images/cars/Benz.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Benz v-series 101</h5>
+                                <p class="card-text">CarID 102.</p>
+                                <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="~/Images/cars/brezza.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Brezza vdi</h5>
+                                <p class="card-text">CarID 105</p>
+                                <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="~/Images/cars/vitara.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Vitara zxi</h5>
+                                <p class="card-text">CarID 106</p>
+                                <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="/Images/cars/Benz.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Benz s-series</h5>
+                                <p class="card-text">CarID 107</p>
+                                <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="~/Images/cars/ferari.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">ferari x78</h5>
+                                <p class="card-text">CarID 108</p>
+                                <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="~/Images/cars/vitara.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">ferari x78</h5>
+                                <p class="card-text">CarID 108</p>
+                                <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div> 
+                   <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="~/Images/cars/Audi.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Vitara zx</h5>
+                                <p class="card-text">CarID 104</p>
+                                <a href="~/Views/Bookings/Create.cshtml" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>-->
+    </body>
 <style>
     body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         background-size: cover;
-        background-image: url('../../images/whitebg1.jpg');
+       /* background-image: url('../../images/whitebg1.jpg');*/
         background-position: center;
         background-repeat: no-repeat;
         height: 100vh; /* Set the height of the body to 100% of the viewport height */
@@ -279,6 +308,11 @@
     .form-group{
         color:white;
     }
-
+    .text-1{
+        color:#2366a1;
+    }
+    .cars{
+        margin-top:5rem;
+    }
 </style>
 

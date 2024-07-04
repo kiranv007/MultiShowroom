@@ -11,15 +11,11 @@ namespace MultiShowroom.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Scheme
     {
-        [Required]
         public int SchemeID { get; set; }
-        [Required]
         public string SchemeName { get; set; }
-        [Required]
         public string Description { get; set; }
     }
 }

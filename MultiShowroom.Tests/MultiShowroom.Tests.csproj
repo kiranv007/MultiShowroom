@@ -97,6 +97,13 @@
     <Content Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controllers\Web.config" />
+    <Content Include="Controllers\Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Controllers\Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
